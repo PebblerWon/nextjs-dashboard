@@ -1,0 +1,8 @@
+export const TESTNET_PACKAGE_ID =
+  "0xb812494dc68667013868c28f8c57e8aefb6b6b5a4c8e1992bc59eea37ebe80ac";
+export const HOUSE_CAP_ID =
+  "0x3d6c37c671e6dccaedfc40e9391731edb79bcec9e36b8efef5be61b9d80558fe";
+export const HOUSD_DATA_ID =
+  "0xd8617144e0f4404942e218f6c74d5a0ad012f17016fd77053d90c9ee939de8b8";
+export const GAME_ID =
+  "0xa512e27f821386dec068403b923421f16453461dc6d6e698a2bb68a5cf08d684";
