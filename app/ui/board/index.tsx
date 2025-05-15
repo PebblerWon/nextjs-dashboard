@@ -1,6 +1,7 @@
 import { CellStatus, Diffculty } from "@/app/components/game/definitions";
 import { useGame } from "@/app/components/game/useGame";
 import React from "react";
+import { Game } from "../game/Game";
 const positionArr = [
   [7, 5],
   [-34, 5],
@@ -8,8 +9,12 @@ const positionArr = [
   [-123, 2],
   [-167, 2],
 ];
-function Board(props: { diffculty: Diffculty }) {
-  const { game, verify } = useGame();
+function Board(props: {
+  diffculty: Diffculty;
+  game: Game;
+  verify: (index: number, diffculty: Diffculty) => void;
+}) {
+  const { game, verify } = props;
 
   return (
     <div className={`h-full grid grid-rows-6 grid-cols-4 gap-4`}>

@@ -1,6 +1,5 @@
-import "app/components/global.css";
-import { inter } from "./components/fonts";
-import { ToastContainer } from "react-toastify";
+import '@/app/ui/global.css';
+import { inter } from './ui/fonts';
 
 export default function RootLayout({
   children,
@@ -8,16 +7,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" style={{ fontSize: 16 }}>
-      <body
-        className={`${inter.className} antialiased`}
-        style={{
-          backgroundColor: "#232626",
-        }}
-      >
-        <ToastContainer />
-        {children}
-      </body>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

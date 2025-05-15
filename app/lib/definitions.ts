@@ -86,21 +86,3 @@ export type InvoiceForm = {
   amount: number;
   status: "pending" | "paid";
 };
-
-export enum Diffculty {
-  EASY = 1,
-  MIDDLE = 2,
-  HARD = 3,
-}
-
-export enum GameStatus {
-  Ready = 0,
-  Running = 1,
-  Done = 2,
-}
-
-export enum CellStatus {
-  ToVerify = 0,
-  Good = 1,
-  Bad = 2,
-}

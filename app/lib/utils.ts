@@ -1,4 +1,4 @@
-import { Revenue } from "../components/game/definitions";
+import { Revenue } from "../ui/game/definitions";
 
 export const formatCurrency = (amount: number) => {
   return (amount / 100).toLocaleString("en-US", {
