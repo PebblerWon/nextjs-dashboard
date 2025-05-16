@@ -1,4 +1,4 @@
-import { CustomerField } from "@/app/components/game/definitions";
+import { CustomerField } from "@/app/lib/definitions";
 import Link from "next/link";
 import {
   CheckIcon,
@@ -7,14 +7,18 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import { Button } from "@/app/ui/button";
+import { createInvoice } from "@/app/lib/actions";
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   return (
-    <form>
+    <form action={createInvoice}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
         <div className="mb-4">
-          <label htmlFor="customer" className="mb-2 block text-sm font-medium">
+          <label
+            htmlFor="customer"
+            className="mb-2 block text-sm font-medium"
+          >
             Choose customer
           </label>
           <div className="relative">
@@ -24,11 +28,17 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
               defaultValue=""
             >
-              <option value="" disabled>
+              <option
+                value=""
+                disabled
+              >
                 Select a customer
               </option>
               {customers.map((customer) => (
-                <option key={customer.id} value={customer.id}>
+                <option
+                  key={customer.id}
+                  value={customer.id}
+                >
                   {customer.name}
                 </option>
               ))}
@@ -39,7 +49,10 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
 
         {/* Invoice Amount */}
         <div className="mb-4">
-          <label htmlFor="amount" className="mb-2 block text-sm font-medium">
+          <label
+            htmlFor="amount"
+            className="mb-2 block text-sm font-medium"
+          >
             Choose an amount
           </label>
           <div className="relative mt-2 rounded-md">
